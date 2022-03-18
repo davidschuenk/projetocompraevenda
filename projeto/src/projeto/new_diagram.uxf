@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>0</y>
+      <w>464</w>
+      <h>424</h>
+    </coordinates>
+    <panel_attributes>projeto::Usuario
+--
+#nome = null: String
+#senha = null: String
+#email = null: String
+#cpf = null: String
+#idade = null: String
+#tel = null: String
+--
++getNome(): String
++setNome(String nome): void
++getSenha(): String
++setSenha(String senha): void
++getEmail(): String
++setEmail(String email): void
++getCpf(): String
++setCpf(String cpf): void
++getIdade(): String
++setIdade(String idade): void
++getTel(): String
++setTel(String tel): void
++exibirperfil(String caminho, String caminhotemp, String emaillog): void
++isDateValid(String date): boolean
++verificarlogin(String caminho, String email, String senha): boolean
++verificarhierarquia(String caminho, String email): String
++verificarnome(String nome): boolean
++verificarnumero(String numero): boolean
++emailrepitido(String caminho, String email): boolean
++validarEmail(String email): boolean
++excluirtodosprodutos(String caminho, String caminhotemp, String emailpro): void
++excluircliente(String caminho, String caminhotemp, String senhalog, String emaillog): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>888</x>
+      <y>8</y>
+      <w>424</w>
+      <h>416</h>
+    </coordinates>
+    <panel_attributes>projeto::Produtos
+--
+-nome = null: String
+-data = null: String
+-preco = null: String
+-descricao = null: String
+-ident = null: String
+-emailpertencente = null: String
+--
++getEmailpertencente(): String
++setEmailpertencente(String emailpertencente): void
++getNome(): String
++setNome(String nome): void
++getData(): String
++setData(String data): void
++getDescricao(): String
++setDescricao(String descricao): void
++getPreco(): String
++setPreco(String preco): void
++getIdent(): String
++setIdent(String ident): void
++CadastrarProduto(String caminho, String email): void
++somarid(String caminho): int
++relatorioDeProdutos(String caminho): void
++relatorioDeProdutoscompra(String caminho, String emaillog): void
++produtosdocliente(String caminho, String email): boolean
++comprarproduto(String caminho, String caminhotemp, int id, String emaillog): void
++editarproduto(String caminho, String caminhotemp, String emaillog, int id): void
++arrumarId(String caminho, String caminhotemp): void
++excluirproduto(String caminho, String caminhotemp, int id, String emaillog): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>448</y>
+      <w>400</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>projeto::Admin
+--
+--
++cadastraradmin(String caminho): void
++editaradm(String caminho, String caminhotemp, String emaillog): void
++excluirprodutoadm(String caminho, String caminhotemp, int id): void
++excluirclienteadm(String caminho, String caminhotemp, String emaillog): void
++relatorioDepessoas(String caminho): void
++deletartxt(String caminhoj): void
++excluirloja(String caminho, String caminhotemp): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>664</y>
+      <w>224</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>projeto::Inicio
+--
+--
++main(String[] args): void
++menuadm(): void
++menuclienteconfig(): void
++menucliente(): void
++menuprincipal(): void
++verificarArquivo(String caminho): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>448</y>
+      <w>312</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>projeto::Cliente
+--
+--
++cadastrarclientetxt(String caminho): void
++editarcliente(String caminho, String caminhotemp,
+String caminhop, String caminhoptemp, String emaillog): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>336</y>
+      <w>72</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>184</x>
+      <y>328</y>
+      <w>112</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+</diagram>
